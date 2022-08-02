@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import logo from './resource/ziggo-logo.svg'
+import MultipleChoice from './components/MultipleChoice'
+import OpenEndedQuestion from './components/OpenEndedQuestion'
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <section className="one">
+        <img src={logo} className="survey-logo" alt="logo" />
+      </section>
+      <section className="two">
+        <MultipleChoice></MultipleChoice>
+      </section>
+      <section className="three">
+        <OpenEndedQuestion></OpenEndedQuestion>
+      </section>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
